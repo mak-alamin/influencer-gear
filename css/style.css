@@ -72,7 +72,7 @@ header {
 h1.brand-name a {
   text-decoration: none;
   color: var(--color-gray);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 /* Banner starts */
@@ -87,6 +87,11 @@ section.banner {
 .banner-text h1 {
   font-size: 2.8rem;
 }
+.banner-text p {
+  font-weight: 500;
+  max-width: 500px;
+  margin-top: 10px;
+}
 .banner-text a {
   margin-top: 20px;
 }
@@ -97,6 +102,21 @@ section.banner {
 .banner-image {
   background: url("../images/circle-design.svg") no-repeat center;
   background-size: contain;
+}
+a.button.button-primary,
+a.button.button-secondary i,
+a.button.button-primary i {
+  transition: 0.3s all ease-in-out;
+}
+a.button.button-primary:hover {
+  background: #ef3779;
+}
+a.button.button-secondary:hover i {
+  transform: translateX(10px);
+}
+a.button.button-primary:hover i {
+  transition: 0.3s all;
+  transform: translateX(10px);
 }
 /* Banner ends */
 
@@ -146,7 +166,6 @@ section.banner {
   font-weight: bold;
   color: var(--color-lightgray);
 }
-
 /* Footer starts */
 footer {
   background-color: var(--bg-black);
@@ -161,7 +180,7 @@ footer {
 .social-icons a i {
   color: #fff;
 }
-.footer-text{
+.footer-text {
   margin-bottom: 10px;
 }
 .social-icons a {
@@ -169,12 +188,68 @@ footer {
   height: 34px;
   padding: 5px;
   margin: 5px;
-  background: #22213C;
+  background: #22213c;
   display: inline-block;
   border-radius: 50%;
-  transition: .3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
-.social-icons a:hover{
+.social-icons a:hover {
   background: var(--bg-primary);
 }
 /* Footer ends*/
+
+/*---------------------------------*\
+ Responsive Styles 
+\*----------------------------------*/
+
+/* Mobile Devices */
+@media (max-width: 767px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Tablet and Mobile Devices */
+@media (max-width: 991px) {
+  section.banner {
+    min-height: auto;
+  }
+  .row {
+    flex-direction: column;
+  }
+  header {
+    padding: 35px 30px 25px;
+  }
+  h1.brand-name a {
+    font-size: 1.2rem;
+  }
+  .banner-image {
+    order: 1;
+  }
+  .banner-image img {
+    max-width: 270px;
+  }
+  .banner-text {
+    order: 2;
+    text-align: center;
+  }
+  .banner-text h1 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+  }
+  .popular-products h2 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+  }
+  .product-grid {
+    grid-gap: 20px;
+    margin-bottom: 25px;
+  }
+}
