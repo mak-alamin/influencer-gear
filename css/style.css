@@ -33,7 +33,6 @@ section {
 
 .button-primary,
 .button-secondary {
-  background-color: var(--bg-primary);
   display: inline-block;
   color: #fff;
   padding: 10px 20px;
@@ -44,18 +43,22 @@ section {
   border-radius: 50px;
   cursor: pointer;
 }
+.button-primary {
+  background: var(--bg-primary);
+}
 .button-primary,
 .button-primary span {
   color: #fff;
 }
-.button-secondary {
-  background-color: var(--link-gray);
-  color: var(--color-black);
+.button-secondary,
+.button-secondary span,
+.button-secondary i {
+  color: var(--bg-primary);
 }
-.text-center{
+.text-center {
   text-align: center;
 }
-.pull-right{
+.pull-right {
   float: right;
 }
 img {
@@ -101,7 +104,7 @@ section.banner {
 .popular-products .container {
   max-width: 1048px;
 }
-.popular-products h2{
+.popular-products h2 {
   text-align: center;
   margin-bottom: 40px;
 }
@@ -109,15 +112,41 @@ section.banner {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+  margin-bottom: 40px;
 }
-.product-grid .product{
-  padding:14px;
+.product-grid .product {
+  padding: 14px;
   border-radius: 5px;
   box-shadow: 0px 0px 40px 0px #00000026;
 }
-.product-grid .product img{
+.product-grid .product img {
   border-radius: 5px;
 }
+.product h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.product .price {
+  font-size: 1.4rem;
+  line-height: 30px;
+  margin-bottom: 8px;
+}
+.rating i {
+  color: #fb8200;
+  font-size: 14px;
+}
+.rating span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.product p.description {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--color-lightgray);
+}
+
 /* Footer starts */
 footer {
   background-color: var(--bg-black);
@@ -125,11 +154,27 @@ footer {
   text-align: center;
 }
 .footer-title {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 .footer-title,
 .footer-text p small,
 .social-icons a i {
   color: #fff;
+}
+.footer-text{
+  margin-bottom: 10px;
+}
+.social-icons a {
+  width: 34px;
+  height: 34px;
+  padding: 5px;
+  margin: 5px;
+  background: #22213C;
+  display: inline-block;
+  border-radius: 50%;
+  transition: .3s all ease-in-out;
+}
+.social-icons a:hover{
+  background: var(--bg-primary);
 }
 /* Footer ends*/
