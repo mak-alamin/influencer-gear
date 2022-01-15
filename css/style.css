@@ -238,6 +238,9 @@ footer {
 
 /* Tablet and Mobile Devices */
 @media (max-width: 991px) {
+  section {
+    margin-bottom: 50px;
+  }
   section.banner {
     min-height: auto;
   }
@@ -271,5 +274,8 @@ footer {
   .product-grid {
     grid-gap: 20px;
     margin-bottom: 25px;
+  }
+  .testimonial p {
+    text-align: center;
   }
 }
