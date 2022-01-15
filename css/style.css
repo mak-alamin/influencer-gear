@@ -1,0 +1,78 @@
+/* General Styles */
+:root {
+  --color-black: #18191f;
+  --color-gray: #3a3a3a;
+  --color-lightgray: #787885;
+  --bg-black: #0a0826;
+  --bg-primary: #e02c6d;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #333;
+  box-sizing: border-box;
+}
+section {
+  margin-bottom: 80px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-primary,
+.button-secondary {
+  background-color: var(--color-black);
+  display: inline-block;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.button-secondary {
+  background-color: var(--link-gray);
+  color: var(--color-black);
+}
+img {
+  width: 100%;
+}
+
+/* Products Styles */
+.popular-products .container {
+  max-width: 1048px;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+/* Footer starts */
+footer {
+  background-color: var(--bg-black);
+  padding: 50px 0;
+  text-align: center;
+}
+.footer-title {
+  margin-bottom: 20px;
+}
+.footer-title,
+.footer-text p small,
+.social-icons a i {
+  color: #fff;
+}
+/* Footer ends*/
